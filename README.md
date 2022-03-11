@@ -62,7 +62,7 @@
 # Installation
 ## 📝 Cloning this repo
 ```cmd
-> git clone https://github.com/SlavyanDesu/BocchiBot.git
+> git clone https://github.com/gameproarmy/BocchiBot.git
 > cd BocchiBot
 ```
 
