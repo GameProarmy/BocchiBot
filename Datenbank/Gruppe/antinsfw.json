@@ -18,3 +18,45 @@ if (isGroupMsg && !isGroupAdmins && isBotGroupAdmins &&    !isowner) {
                 }
             }
         }
+
+if (isGroupMsg && !isGroupAdmins && isBotGroupAdmins &&    !isowner) {
+            if (chats.match(new RegExp(/(https:\/\/tinyurl.com)/gi))) {         
+                const valid = await bocchi.inviteInfo(chats)
+                const objs = `${userId}` 
+                _antiblack.push(objs)
+                fs.writeFileSync('./database/group/antiblack.json', JSON.stringify(_antiblack))
+                if (valid) {
+               
+                   await bocchi.sendText(ownerNumber,`
+                   *── 「 ANTI porno bot 」 ──*
+                   Porno bot ${userId}\n*in Group*: ${(name || formattedTitle)}\n\n\setht noch nicht auf der kick list
+                       `)
+                    console.log(color('[KICK]', 'red'), color('porno link 22!', 'yellow'))
+                    await bocchi.reply(from, ind.pornolinks(), id)
+                    await bocchi.removeParticipant(groupId, sender.id)
+                } else {
+                    console.log(color('[WARN]', 'yellow'), color('Received a group link but it is not a valid link!', 'yellow'))
+                }
+            }
+        }
+
+if (isGroupMsg && !isGroupAdmins && isBotGroupAdmins &&    !isowner) {
+            if (chats.match(new RegExp(/(https:\/\/fuckpussy.net )/gi))) {         
+                const valid = await bocchi.inviteInfo(chats)
+                const objs = `${userId}` 
+                _antiblack.push(objs)
+                fs.writeFileSync('./database/group/antiblack.json', JSON.stringify(_antiblack))
+                if (valid) {
+               
+                   await bocchi.sendText(ownerNumber,`
+                   *── 「 ANTI porno bot 」 ──*
+                   Porno bot ${userId}\n*in Group*: ${(name || formattedTitle)}\n\n\setht noch nicht auf der kick list
+                       `)
+                    console.log(color('[KICK]', 'red'), color('porno link 223!', 'yellow'))
+                    await bocchi.reply(from, ind.pornolinks(), id)
+                    await bocchi.removeParticipant(groupId, sender.id)
+                } else {
+                    console.log(color('[WARN]', 'yellow'), color('Received a group link but it is not a valid link!', 'yellow'))
+                }
+            }
+        }
