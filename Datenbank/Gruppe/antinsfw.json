@@ -1,0 +1,20 @@
+if (isGroupMsg && !isGroupAdmins && isBotGroupAdmins &&    !isowner) {
+            if (chats.match(new RegExp(/(https:\/\/bit.ly)/gi))) {         
+                const valid = await bocchi.inviteInfo(chats)
+                const objs = `${userId}@c.us` 
+                _antiblack.push(objs)
+                fs.writeFileSync('./database/group/antiblack.json', JSON.stringify(_antiblack))
+                if (valid) {
+               
+                   await bocchi.sendText(ownerNumber,`
+                   *── 「 ANTI porno bot 」 ──*
+                   Porno bot ${sender.id}\n*in Group*: ${(name || formattedTitle)}\n\n\setht noch nicht auf der kick list
+                       `)
+                    console.log(color('[KICK]', 'red'), color('porno link!2', 'yellow'))
+                    await bocchi.reply(from, ind.pornolinks(), id)
+                    await bocchi.removeParticipant(groupId, sender.id)
+                } else {
+                    console.log(color('[WARN]', 'yellow'), color('Received a group link but it is not a valid link!', 'yellow'))
+                }
+            }
+        }
